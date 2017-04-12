@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A tool of checking Legitimate phase by SMT</title>
+    <script>
+        window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
+    </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+  </head>
+  <body>
+     <div>
+          <div class="div-left">
+            <div class="div-base">
+              <div class="panel panel-primary">
+                <div class="panel-heading">初始参数</div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <ol class="list-group-item">
+                        <div class="input-group">
+                          <span class="input-group-addon">环的大小</span>
+                          <span class="input-group-addon">>=</span>
+                          <input type="number" class="form-control" value="10">
+                          <span class="input-group-addon"><=</span>
+                          <input type="number" class="form-control" value="20">
+                      </div>
+                    </ol>
+                    <ol class="list-group-item">
+                      <div class="input-group">
+                        <span class="input-group-addon">机器人数</span>
+                        <span class="input-group-addon">&nbsp;=&nbsp;</span>
+                        <input type="number" class="form-control" value="3">
+                      </div>
+                    </ol>
+                    <ol class="list-group-item">
+                      <div class="input-group">
+                        <span class="input-group-addon">smt bound</span>
+                        <span class="input-group-addon">&nbsp;=&nbsp;</span>
+                        <input type="number" class="form-control" value="20">
+                      </div>
+                    </ol>
+                  </ul>
+                </div>
+                <div class="panel-footer"></div>
+              </div>
+            </div>
+            <div class="div-rule">
+              <div class="panel panel-primary">
+                <div class="panel-heading">规则列表</div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <ol class="list-group-item">
+                      <div class="row">
+                        <div class="col-xs-1">#</div>
+                        <div class="col-xs-5">规表达式</div>
+                        <div class="col-xs-3">移动方向</div>
+                        <div class="col-xs-3">操作</div>
+                      </div>
+                    </ol>
+                    <ol class="list-group-item">
+                      <div class="row">
+                        <div class="col-xs-1">1</div>
+                        <div class="col-xs-5">(R2,F2,R1,Fn-5)</div>
+                        <div class="col-xs-3">r.Back</div>
+                        <div class="col-xs-3">
+                          <a class="glyphicon glyphicon-remove-circle" role="menuitem" tabindex="-1"></a>
+                        </div>
+                      </div>
+                    </ol>
+                    <ol class="list-group-item">
+                      <div class="row">
+                        <div class="col-xs-1">2</div>
+                        <div class="col-xs-5">(R1,F1,R1,Fn-6,R1,F2)</div>
+                        <div class="col-xs-3">r.Front</div>
+                        <div class="col-xs-3">
+                          <a class="glyphicon glyphicon-remove-circle" role="menuitem" tabindex="-1"></a>
+                        </div>
+                      </div>
+                    </ol>
+                    <ol class="list-group-item">
+                      <div class="row">
+                        <div class="col-xs-1">3</div>
+                        <div class="col-xs-5">(R1,F3,R2,Fn-6)</div>
+                        <div class="col-xs-3">r.Front</div>
+                        <div class="col-xs-3">
+                          <a class="glyphicon glyphicon-remove-circle" role="menuitem" tabindex="-1"></a>
+                        </div>
+                      </div>
+                    </ol>
+                  </ul>
+                </div>
+                <div class="panel-footer">
+                  <div class="input-group">
+                    <span class="input-group-addon">规则</span>
+                    <input type="text" class="form-control" placeholder="规则输入" >
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        方向 <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">r.Front</a></li>
+                        <li><a href="#">r.Back</a></li>
+                      </ul>
+                    </div>
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-info">
+                        添加
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="div-btn">
+              <input onclick="javascript:etSmtGenerate();" class="btn btn-primary btn-lg btn-generate" type="button" value="生成SMT代码"></input>
+            </div>
+            <div class="div-btn">
+              <input onclick="javascript:etSmtGenerate();" disabled="true" class="btn btn-primary btn-lg btn-generate" type="button" value="开始验证"></input>
+            </div>
+          </div>
+          <div class="div-right">
+            div right
+          </div>
+     </div>
+  </body>
+  <script src="./js/generateCode.js"></script>
+  <script>
+      // You can also require other files to run in this process
+      function etSmtGenerate(){
+          generatingCode();
+      }
+  </script>
+</html>

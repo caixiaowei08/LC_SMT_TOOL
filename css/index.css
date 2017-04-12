@@ -1,0 +1,42 @@
+.div-left{
+    float:left;
+    width: 30%;
+    margin:0px 0px 0px 0px;
+    overflow: auto;
+    height: 100%;
+    border-right: solid #576067 1px;
+    height:100%;
+    position:absolute;
+}
+
+.div-right{
+    width: 70%;
+    float:right; margin:0px 0px 0px 0px;
+}
+
+.div-rule{
+}
+
+.div-rule-input{
+    margin: auto 10px;
+}
+
+.dropdown-menu{
+    min-width: 0px !important;
+}
+
+.div-btn{
+    margin-top: 25px;
+}
+
+.div-btn-space{
+    width:100%;
+}
+
+.btn-generate{
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+
+}
