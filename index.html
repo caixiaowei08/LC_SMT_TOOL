@@ -93,22 +93,23 @@
                   </ul>
                 </div>
                 <div class="panel-footer">
-                  <div class="input-group">
-                    <span class="input-group-addon">规则</span>
-                    <input type="text" class="form-control" placeholder="规则输入" >
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        方向 <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">r.Front</a></li>
-                        <li><a href="#">r.Back</a></li>
-                      </ul>
+
+                  <div class="input-group form-group">
+                    <span class="input-group-addon">RULE</span>
+                    <input type="text" class="form-control" placeholder="规则输入 eg:(R2,F2,R1,Fn-5)" >
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-8">
+                      <div class="input-group">
+                        <span class="input-group-addon">RULE</span>
+                        <select class="form-control" required="true">
+                          <option selected = "true" value="r.Front">r.Front</option>
+                          <option value="r.Back">r.Back</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-info">
-                        添加
-                      </button>
+                    <div class="col-sm-4">
+                      <input type="button" class="btn btn-primary btn-block btn-success" value="添加规则">
                     </div>
                   </div>
                 </div>
@@ -122,7 +123,17 @@
             </div>
           </div>
           <div class="div-right">
-            div right
+            <nav class="navbar nav-">
+              <div class="navbar-header">
+                <div class="navbar-brand">
+                  <h4><span class="label label-success">控制台输出</span></h4>
+                </div>
+              </div>
+            </nav>
+            <div class="alert alert-success text-center" role="alert">
+                <span class="glyphicon glyphicon-compressed" aria-hidden="true"></span>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;SMT代码生成完毕，请点击【开始验证】</span>
+            </div>
           </div>
      </div>
   </body>
