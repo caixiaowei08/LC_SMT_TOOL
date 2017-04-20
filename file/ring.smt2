@@ -17,6 +17,7 @@
 ;机器人数 和 环节点数 互质 定义开始
 (assert (forall ((x Int)) (=> (and (> x 1) (<= x r)) (not (and (= (mod n x) 0) (= (mod r x) 0))))))
 ;机器人数 和 环节点数 互质 定义结束
+
 ;时钟设置 定义开始
 (declare-fun clock (Int) Int)
 (assert (= (clock 1) 1))
